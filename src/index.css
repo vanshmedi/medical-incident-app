@@ -83,6 +83,56 @@ button:active { transform: translateY(1px); }
 }
 .textarea { min-height: 100px; }
 
+/* Chips for active filters */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff5eb;
+  border: 1px solid #ffd8b0;
+  color: #9a5a00;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.chip:hover { background: #ffe9d1; }
+
+/* Dropdown filter styles */
+.dropdown .dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  background: white;
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: none;
+  padding: 10px 12px;
+}
+.dropdown .badge {
+  background: var(--accent);
+  color: white;
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.dropdown .dropdown-menu {
+  animation: fade-in 120ms ease-out;
+}
+.dropdown .dropdown-option.active {
+  background: #fff5eb;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .kv {
   display: grid;
   gap: 4px;
